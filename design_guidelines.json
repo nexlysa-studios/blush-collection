@@ -1,0 +1,118 @@
+{
+  "theme": "light",
+  "typography": {
+    "headings": {
+      "font_family": "Cormorant Garamond",
+      "weights": ["400", "500", "600"],
+      "usage": "H1, H2, H3, large editorial text. Use elegant tracking (tracking-tight for large text)."
+    },
+    "body": {
+      "font_family": "Manrope",
+      "weights": ["300", "400", "500"],
+      "usage": "Paragraphs, UI elements, buttons, small text."
+    },
+    "accent": {
+      "font_family": "Italiana",
+      "weights": ["400"],
+      "usage": "Used sparingly for decorative brand moments, quotes, or subheadings."
+    }
+  },
+  "colors": {
+    "background": {
+      "primary": "#FAF8F5",
+      "secondary": "#FFFFFF"
+    },
+    "brand": {
+      "primary": "#FADADD",
+      "secondary": "#DCAEAF",
+      "accent": "#592C32",
+      "muted": "#E8D8D8"
+    },
+    "text": {
+      "primary": "#2E1C1E",
+      "secondary": "#592C32",
+      "inverse": "#FAF8F5"
+    }
+  },
+  "visual_enhancers": {
+    "borders": "Thin, delicate borders (1px solid #E8D8D8). Fine dotted separators for editorial feel.",
+    "shadows": "Very soft, diffused shadows (shadow-[0_8px_30px_rgb(0,0,0,0.04)]). Only use on hover or for floating elements.",
+    "border_radius": "Subtle rounded corners (rounded-md or rounded-lg) for images. Pill-shaped (rounded-full) for buttons and badges.",
+    "motifs": "Include small SVGs for bow/sparkle/floral motifs sparingly as dividers or next to headers.",
+    "gradients": "Very subtle, low-opacity linear gradients (e.g., from #FAF8F5 to #FADADD/20) for section backgrounds, avoiding generic SaaS gradients."
+  },
+  "components": {
+    "buttons": "Pill-shaped. Primary: bg-[#592C32] text-[#FAF8F5] hover:bg-[#2E1C1E]. Secondary: bg-[#FADADD] text-[#592C32] hover:bg-[#DCAEAF].",
+    "cards": "Cardless approach preferred. Use raw divs with thin borders or just spacing. If using cards, use no background or #FFFFFF, 1px border, no shadow until hover.",
+    "inputs": "Shadcn inputs customized: bg-transparent, border-b only (or thin full border), rounded-none or rounded-sm, focus:border-[#592C32] focus:ring-0.",
+    "announcement_bar": "bg-[#DCAEAF] text-[#FAF8F5] text-sm py-2 text-center tracking-wide font-body.",
+    "whatsapp_float": "Fixed bottom-right. Pill shape with WhatsApp icon. bg-[#25D366] text-white OR bg-[#FADADD] text-[#592C32] depending on contrast needs."
+  },
+  "grids_and_layouts": {
+    "spacing": "Generous. Use py-20 or py-24 for main sections. p-8 or p-12 for internal padding.",
+    "hero": "Editorial split-screen or large immersive image with max 30% overlay. Text box offset, overlapping image slightly.",
+    "product_grid": "Asymmetrical or classic 4-col with plenty of whitespace. Image aspect ratio 4:5 (portrait) is mandatory for jewellery.",
+    "bento": "Avoid rigid bento boxes. Favor free-flowing editorial layouts (masonry or staggered grids) for 'Her Favourites' or 'About' sections."
+  },
+  "motion": {
+    "hover": "Images: scale-105 with long transition (duration-500). Buttons: subtle transform -translate-y-0.5.",
+    "scroll": "Fade in and slight slide up (framer-motion) for sections. Smooth scrolling via Lenis.",
+    "transitions": "Use specific transition properties, NEVER 'transition-all'."
+  },
+  "accessibility": {
+    "contrast": "Ensure text over images has sufficient contrast or a subtle gradient overlay.",
+    "aria": "Include aria-labels for icon-only buttons (like WhatsApp, Cart).",
+    "focus": "Clear focus rings on inputs, using the brand accent color."
+  },
+  "image_urls": {
+    "hero": {
+      "url": "https://images.unsplash.com/photo-1613966561243-c6959a886009?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwxfHxqZXdlbHJ5JTIwYWVzdGhldGljJTIwZWRpdG9yaWFsfGVufDB8fHx8MTc4ODQzNzkwMnww&ixlib=rb-4.1.0&q=85",
+      "description": "Woman in white dress wearing gold necklace - use for main Hero background."
+    },
+    "category_earrings": {
+      "url": "https://images.unsplash.com/photo-1652766540048-de0a878a3266?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMHdlYXJpbmclMjBlbGVnYW50JTIwZWFycmluZ3MlMjBqZXdlbHJ5fGVufDB8fHx8MTc4ODQzNzg4Nnww&ixlib=rb-4.1.0&q=85",
+      "description": "Close up of person wearing earrings - Category image."
+    },
+    "category_rings": {
+      "url": "https://images.unsplash.com/photo-1614606140245-2c33ece9e2cf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHw0fHxnb2xkJTIwcmluZ3MlMjBoYW5kJTIwamV3ZWxyeXxlbnwwfHx8fDE3ODg0Mzc4OTV8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Woman holding hands together showing rings - Category image."
+    },
+    "category_bracelets": {
+      "url": "https://images.unsplash.com/photo-1629118639934-2b241503956c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwzfHxnb2xkJTIwcmluZ3MlMjBoYW5kJTIwamV3ZWxyeXxlbnwwfHx8fDE3ODg0Mzc4OTV8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Gold and white beaded bracelet - Category image."
+    },
+    "category_anklets": {
+      "url": "https://images.unsplash.com/photo-1595051572626-aecfdafb53f2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxhbmtsZXQlMjBqZXdlbHJ5JTIwZm9vdCUyMHdvbWFufGVufDB8fHx8MTc4ODQzNzg4Nnww&ixlib=rb-4.1.0&q=85",
+      "description": "Person wearing silver anklet on leg - Category image."
+    },
+    "texture_background": {
+      "url": "https://images.unsplash.com/photo-1588097257570-59b6f7360bfb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODl8MHwxfHNlYXJjaHwxfHxzb2Z0JTIwZmVtaW5pbmUlMjBibHVzaCUyMHBpbmslMjBhZXN0aGV0aWMlMjB0ZXh0dXJlfGVufDB8fHx8MTc4ODQzNzg4Nnww&ixlib=rb-4.1.0&q=85",
+      "description": "Soft pink swirling texture - use as a subtle overlay or section background."
+    },
+    "promo_banner": {
+      "url": "https://images.unsplash.com/photo-1616294099799-dab525ec05c1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwzfHxuZWNrbGFjZSUyMG9uJTIwd29tYW4lMjBqZXdlbHJ5fGVufDB8fHx8MTc4ODQzNzkwMnww&ixlib=rb-4.1.0&q=85",
+      "description": "Woman in white shirt wearing silver necklace - use for Promo banner or About section."
+    }
+  },
+  "instructions_to_main_agent": [
+    "DO NOT USE INTER, ROBOTO, OR PLAYFAIR DISPLAY. Rely strictly on Cormorant Garamond (headings), Manrope (body), and Italiana (accents).",
+    "All components must be written in .js/.jsx, not .tsx. Do not include TypeScript interfaces or type annotations in the generated code.",
+    "Avoid generic Shopify layouts. Build a Pinterest-inspired editorial layout. Ensure overlapping text/image combinations, off-grid alignment, and generous spacing.",
+    "Do not over-decorate. Use subtle pinks (#FADADD, #DCAEAF) mainly as backgrounds or hovers. Reserve Burgundy (#592C32) for high-contrast elements like typography and primary buttons.",
+    "Use Lucide-React for standard icons, but try to use custom soft SVG motifs for the bow/sparkle elements.",
+    "Implement Shadcn UI carefully by stripping away its default SaaS 'Vercel' look. Soften the borders, change the ring colors, and ensure forms look like high-end boutique forms.",
+    "Ensure the Admin Dashboard uses the same typography but a denser layout suitable for functionality. Keep the dashboard light and clean, avoiding harsh dark sidebars if possible.",
+    "Include a Floating WhatsApp button on the bottom right.",
+    "Every section MUST feel emotionally directed, using close-up product imagery and negative space.",
+    "DO NOT use a complete transparent background in the header, overlays, or any surface that has content under it. Example: Dropdown with transparent background is forbidden."
+  ],
+  "universal_guidelines": [
+    "You MUST NOT apply universal transition (e.g., transition: all). Add transitions for specific interactive elements like button, input excluding transforms.",
+    "You MUST NOT center align the app container, do not add .App { text-align: center; } in the css file.",
+    "Always use modern button styles like pill-shaped, with interaction animations & color relevant to the app style.",
+    "NEVER use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "All interactive and key informational elements MUST include a data-testid attribute to facilitate robust automated testing. Example: data-testid='add-to-cart-button'."
+  ]
+}

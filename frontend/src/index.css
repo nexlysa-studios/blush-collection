@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Italiana&family=Manrope:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+body {
+  margin: 0;
+  font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  background-color: #FAF8F5;
+  color: #2E1C1E;
+}
+
+h1, h2, h3, h4, .font-serif { font-family: 'Cormorant Garamond', ui-serif, Georgia, serif; letter-spacing: -0.01em; }
+.font-script { font-family: 'Italiana', ui-serif, serif; letter-spacing: 0.02em; }
+
+::selection { background: #FADADD; color: #592C32; }
+
+@layer base {
+  :root {
+    --background: 36 39% 97%;
+    --foreground: 350 30% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 350 30% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 350 30% 15%;
+    --primary: 352 34% 25%;
+    --primary-foreground: 36 39% 97%;
+    --secondary: 350 45% 92%;
+    --secondary-foreground: 352 34% 25%;
+    --muted: 350 25% 94%;
+    --muted-foreground: 350 15% 40%;
+    --accent: 350 50% 92%;
+    --accent-foreground: 352 34% 25%;
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 350 20% 88%;
+    --input: 350 20% 88%;
+    --ring: 352 34% 25%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+}
+
+/* Elegant scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #FAF8F5; }
+::-webkit-scrollbar-thumb { background: #E8D8D8; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #DCAEAF; }
+
+/* Fine dotted separator */
+.dotted-sep {
+  background-image: radial-gradient(circle, #DCAEAF 1px, transparent 1px);
+  background-size: 8px 2px;
+  background-repeat: repeat-x;
+  background-position: center;
+  height: 2px;
+}
+
+/* Marquee for announcement bar */
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee-track { display: flex; gap: 3rem; white-space: nowrap; animation: marquee 40s linear infinite; }
+
+/* Product image hover */
+.product-img { transition: transform 700ms ease, opacity 400ms ease; }
+.group:hover .product-img { transform: scale(1.06); }
+
+/* Button hover lift */
+.btn-lift { transition: transform 250ms ease, background-color 250ms ease, color 250ms ease, border-color 250ms ease; }
+.btn-lift:hover { transform: translateY(-1px); }
