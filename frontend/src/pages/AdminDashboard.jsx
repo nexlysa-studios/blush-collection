@@ -85,7 +85,7 @@ export default function AdminDashboard() {
   return (
     <div className="min-h-screen flex bg-cream" data-testid="admin-dashboard">
       <aside className="w-56 border-r border-[#EFE3E1] bg-[#FDF6F5] p-6 flex flex-col">
-        <div className="font-script text-2xl text-[#592C32]">Jules For Her</div>
+        <div className="font-brittany text-4xl text-[#592C32] leading-none">Jules For Her</div>
         <div className="text-[10px] tracking-[0.35em] uppercase text-[#8a5c62]">Boutique admin</div>
         <nav className="mt-8 flex-1 space-y-1">
           {TABS.map((t) => (

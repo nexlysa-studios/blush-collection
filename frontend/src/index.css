@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Italiana&family=Manrope:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Italiana&family=Manrope:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -15,6 +15,7 @@ body {
 
 h1, h2, h3, h4, .font-serif { font-family: 'Cormorant Garamond', ui-serif, Georgia, serif; letter-spacing: -0.01em; }
 .font-script { font-family: 'Italiana', ui-serif, serif; letter-spacing: 0.02em; }
+.font-brittany { font-family: 'Alex Brush', 'Brittany Signature', cursive; letter-spacing: 0.005em; font-weight: 400; }
 
 ::selection { background: #FADADD; color: #592C32; }
 

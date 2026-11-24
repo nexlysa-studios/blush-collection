@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="mt-20 border-t border-[#EFE3E1] bg-[#FDF6F5]" data-testid="site-footer">
       <div className="mx-auto max-w-7xl px-6 sm:px-10 py-16 grid gap-10 md:grid-cols-4">
         <div>
-          <div className="font-script text-3xl text-[#592C32]">Jules For Her</div>
+          <div className="font-brittany text-5xl text-[#592C32] leading-none">Jules For Her</div>
           <p className="mt-3 text-sm text-[#6b4c50] leading-relaxed max-w-xs">Delicate jewellery for everyday sparkle — thoughtfully curated in Cape Town.</p>
         </div>
         <div>

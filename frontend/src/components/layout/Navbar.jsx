@@ -38,7 +38,7 @@ export default function Navbar() {
         </button>
 
         <Link to="/" data-testid="brand-logo" className="md:mr-8 flex-shrink-0 flex flex-col items-center md:items-start leading-none">
-          <span className="font-script text-2xl sm:text-3xl text-[#592C32]">Jules For Her</span>
+          <span className="font-brittany text-4xl sm:text-5xl text-[#592C32] leading-none">Jules For Her</span>
           <span className="hidden sm:block mt-0.5 text-[10px] tracking-[0.4em] uppercase text-[#8a5c62] font-body">Cape Town</span>
         </Link>
 
@@ -104,7 +104,7 @@ export default function Navbar() {
           <div className="absolute inset-0 bg-[#2E1C1E]/40" onClick={() => setOpen(false)} />
           <div className="absolute left-0 top-0 bottom-0 w-[82%] max-w-sm bg-cream flex flex-col animate-fade-in">
             <div className="p-5 flex items-center justify-between border-b border-[#EFE3E1]">
-              <span className="font-script text-2xl text-[#592C32]">Jules For Her</span>
+              <span className="font-brittany text-4xl text-[#592C32] leading-none">Jules For Her</span>
               <button data-testid="mobile-menu-close" onClick={() => setOpen(false)} className="p-2"><X className="h-5 w-5" strokeWidth={1.4} /></button>
             </div>
             <nav className="p-6 flex flex-col gap-1">

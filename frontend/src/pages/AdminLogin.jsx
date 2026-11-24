@@ -29,7 +29,7 @@ export default function AdminLogin() {
         <img src="https://images.unsplash.com/photo-1613966561243-c6959a886009?w=1400&q=80&auto=format&fit=crop" alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-[#2E1C1E]/30"></div>
         <div className="absolute bottom-10 left-10 text-white">
-          <div className="font-script text-4xl">Jules For Her</div>
+          <div className="font-brittany text-5xl leading-none">Jules For Her</div>
           <div className="text-xs tracking-[0.35em] uppercase mt-1">Boutique admin</div>
         </div>
       </div>
