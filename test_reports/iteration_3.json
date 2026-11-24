@@ -1,0 +1,31 @@
+{
+  "summary": "I tested the frontend-only demo fallback on the no-env build served at localhost:5055, then ran a regression check on the preview site with the real backend. All requested flows pass with 0 uncaught page errors. On :5055: home shows 5 category tiles and 8 Her Favourites cards, and all images load. /shop shows '9 PIECES'. Filters work: necklaces=4, bracelets=5, rings=0 with the message 'No pieces match that yet'. Sorting by price works in both directions. The product page shows name, R65 price and image. Add to Bag changes the cart count from empty to 1. /product/does-not-exist redirects to /shop. Checkout with R65 shows the 'Minimum order is R100' toast. Qty 2 (R130) with EFT redirects to /order-success/JFH-...; that page shows subtotal R130, delivery R50 and total R180, the order is stored in localStorage jfh_demo_orders, the cart clears, and the page still works after a reload. FAQ shows 7 questions that expand. The contact form shows a success toast and clears. Admin login shows the toast 'Admin isn't available on this preview link yet — it needs the live backend.', and /admin redirects to /admin/login. On the preview: home loads 5 categories and 8 favourites, /shop shows 9 pieces, a real EFT order (JFH-20261124-91EAF3) went through /api/orders with status 200 and nothing was written to localStorage, admin login works, and the Orders tab lists that order. Note: cherry-charm-necklace (named in the brief) is sold_out=true in both the real DB and demoData.json, so Add to Bag is disabled for it. I used gold-tulip-pendant-necklace (R65) instead.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {
+    "ui_bugs": [
+      {"component": "OrderSuccess", "issue": "An unknown order number (e.g. /order-success/JFH-FAKE) shows 'Loading…' forever because the catch is empty. It should show a not-found state. This happens in both modes.", "selector": "order-summary", "priority": "LOW"}
+    ],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [
+    "HIGH (risk): api.js uses demoFallback for any network error or 5xx, even when a real backend is configured. If the live backend is briefly down, POST /orders makes a local-only fake order and the customer sees 'Order Confirmed'. The shop never receives it. The same happens to contact messages. Turn the fallback on only when REACT_APP_BACKEND_URL is unset (or behind an explicit REACT_APP_DEMO_MODE flag), or at least never fall back for POST /orders and /contact when a backend URL exists.",
+    "MEDIUM: cherry-charm-necklace is sold_out in demoData.json, copied from the DB. If the client demo is meant to show adding it to the bag, set sold_out=false in the demo data (or in the DB).",
+    "LOW: demoData.json product and category images are hot-linked to customer-assets-*.emergentagent.net. If those assets stop being served, the Netlify demo loses all its images. Consider bundling them in /public.",
+    "LOW: OrderSuccess needs a not-found or error state instead of loading forever.",
+    "LOW: the cart quantity +/- buttons in Cart.jsx have no data-testid."
+  ],
+  "critical_code_review_comments": [
+    "api.js: the interceptor treats any 5xx or network error as 'no backend'. That is fine for a demo but dangerous in production for write endpoints (orders, contact): customers' orders could be silently lost.",
+    "demoFallback.createOrder does not check stock or sold_out, and it trusts the client-sent item prices. Acceptable for a demo only.",
+    "In demo mode, 'newest' sort returns the same order as 'featured'. This is expected because the data is already ordered by created_at desc."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "N/A (skipped)", "frontend": "100%"},
+  "seed_data_creation": "On the preview with the real backend, I created one order: JFH-20261124-91EAF3 (customer TEST_Regression, 2x Gold Tulip, R180). There is no admin delete-order endpoint, so it is still in the DB. The order lowered gold-tulip-pendant-necklace stock from 12 to 10. I restored it to 12 with PATCH /api/admin/products/bc156a29-f382-4107-85dc-6298149019ef, which also changed that product's updated_at. The demo order on :5055 exists only in browser localStorage.",
+  "retest_needed": false,
+  "should_main_agent_self_test": true,
+  "context_for_next_testing_agent": "A no-env build is served on localhost:5055 (npx serve -s build -l 5055); do not rebuild it. Use gold-tulip-pendant-necklace for add-to-cart tests because cherry-charm is sold out. The PDP quantity control has testid qty-increase; the cart quantity buttons have no testid. Checkout testids: ck-name, ck-email, ck-phone, ck-address, ck-suburb, ck-payment input[value=eft], place-order-btn. Toasts can be read from [data-sonner-toast]. On the FAQ page, the first item (index 0) is open by default.",
+  "rca of the issue": "N/A. This was a feature verification. Fallback flow: with no env var, requests go to 'undefined/api/...', serve -s (or Netlify) returns index.html as text/html, and the interceptor detects the non-JSON response and calls demoFallback."
+}

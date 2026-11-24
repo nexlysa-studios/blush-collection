@@ -8,8 +8,16 @@ export default function OrderSuccess() {
   const { orderNumber } = useParams();
   const s = useSettings();
   const [order, setOrder] = useState(null);
-  useEffect(() => { api.get(`/orders/${orderNumber}`).then((r) => setOrder(r.data)).catch(() => {}); }, [orderNumber]);
+  const [missing, setMissing] = useState(false);
+  useEffect(() => { api.get(`/orders/${orderNumber}`).then((r) => setOrder(r.data)).catch(() => setMissing(true)); }, [orderNumber]);
 
+  if (missing) return (
+    <div className="mx-auto max-w-3xl px-6 py-24 text-center" data-testid="order-not-found">
+      <h1 className="font-serif text-4xl text-[#2E1C1E]">We couldn't find that order.</h1>
+      <p className="mt-3 text-[#6b4c50]">Please check the order number, or message us on WhatsApp and we'll help.</p>
+      <Link to="/shop" className="mt-8 inline-block bg-[#592C32] text-white px-8 py-4 rounded-full text-xs tracking-[0.3em] uppercase btn-lift">Back To Shop</Link>
+    </div>
+  );
   if (!order) return <div className="py-24 text-center font-serif text-2xl">Loading…</div>;
 
   const lines = order.items.map((i) => `• ${i.name} x${i.quantity}  ${formatZAR(i.price * i.quantity)}`).join("\n");
