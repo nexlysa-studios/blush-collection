@@ -24,9 +24,13 @@ from pydantic import BaseModel, Field, EmailStr
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 logger = logging.getLogger("jules")
 
-mongo_url = os.environ["MONGO_URL"]
-client = AsyncIOMotorClient(mongo_url)
-db = client[os.environ["DB_NAME"]]
+if os.environ.get("DATABASE_URL"):
+    from pgdb import PgDatabase
+    db = PgDatabase(os.environ["DATABASE_URL"])
+    client = None
+else:
+    client = AsyncIOMotorClient(os.environ["MONGO_URL"])
+    db = client[os.environ["DB_NAME"]]
 
 app = FastAPI(title="Jules For Her API")
 api = APIRouter(prefix="/api")
@@ -644,7 +648,10 @@ async def on_startup():
 
 @app.on_event("shutdown")
 async def shutdown_db_client():
-    client.close()
+    if client is None:
+        await db.aclose()
+    else:
+        client.close()
 
 
 @api.get("/health")

@@ -32,3 +32,9 @@ Build a complete, production-ready e-commerce website for a South African jewell
 - SEO sitemap.xml + robots.txt
 - Structured data (Product schema)
 - Discount codes
+
+## Hosting update (Supabase/Render/Netlify)
+- backend/pgdb.py: Postgres JSONB adapter; server.py uses Supabase when DATABASE_URL is set, MongoDB otherwise (preview stays on Mongo)
+- scripts/migrate_to_supabase.py copies all collections Mongo -> Supabase (tested on local Postgres 15)
+- render.yaml + backend/requirements-render.txt for Render; netlify.toml + frontend/public/_redirects for Netlify; DEPLOYMENT.md guide
+- PENDING: SUPABASE_DATABASE_URL saved is the Direct connection (IPv6-only, unreachable); needs the Session pooler string before migrating
