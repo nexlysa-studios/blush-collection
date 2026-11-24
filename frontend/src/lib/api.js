@@ -2,7 +2,19 @@ import axios from "axios";
 
 export const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
+if (!process.env.REACT_APP_BACKEND_URL) {
+  console.error("REACT_APP_BACKEND_URL is not set — API calls will fail. Set it in your hosting environment variables and rebuild.");
+}
+
 export const api = axios.create({ baseURL: API });
+
+api.interceptors.response.use((res) => {
+  const type = res.headers?.["content-type"] || "";
+  if (!type.includes("application/json")) {
+    return Promise.reject(new Error(`API returned non-JSON response from ${res.config?.url}`));
+  }
+  return res;
+});
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("jfh_token");
