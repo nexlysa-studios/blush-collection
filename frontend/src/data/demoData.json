@@ -1,0 +1,253 @@
+{
+ "categories": [
+  {
+   "id": "f34d2f62-5342-4aa1-806f-d176becb61b2",
+   "slug": "necklaces",
+   "name": "Necklaces",
+   "starting_price": 65,
+   "image_url": "https://images.unsplash.com/photo-1616294099799-dab525ec05c1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwzfHxuZWNrbGFjZSUyMG9uJTIwd29tYW4lMjBqZXdlbHJ5fGVufDB8fHx8MTc4ODQzNzkwMnww&ixlib=rb-4.1.0&q=85",
+   "description": "",
+   "order": 0
+  },
+  {
+   "id": "9f170d53-355b-4f4f-8ff8-e53698e945d2",
+   "slug": "anklets",
+   "name": "Anklets",
+   "starting_price": 55,
+   "image_url": "https://images.unsplash.com/photo-1595051572626-aecfdafb53f2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxhbmtsZXQlMjBqZXdlbHJ5JTIwZm9vdCUyMHdvbWFufGVufDB8fHx8MTc4ODQzNzg4Nnww&ixlib=rb-4.1.0&q=85",
+   "description": "",
+   "order": 1
+  },
+  {
+   "id": "219ca7a1-eefb-4636-8bbf-52cc7f604486",
+   "slug": "rings",
+   "name": "Rings",
+   "starting_price": 45,
+   "image_url": "https://images.unsplash.com/photo-1614606140245-2c33ece9e2cf?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHw0fHxnb2xkJTIwcmluZ3MlMjBoYW5kJTIwamV3ZWxyeXxlbnwwfHx8fDE3ODg0Mzc4OTV8MA&ixlib=rb-4.1.0&q=85",
+   "description": "",
+   "order": 2
+  },
+  {
+   "id": "41a80016-0d34-427f-9380-d80555e6ed85",
+   "slug": "earrings",
+   "name": "Earrings",
+   "starting_price": 45,
+   "image_url": "https://images.unsplash.com/photo-1652766540048-de0a878a3266?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMHdlYXJpbmclMjBlbGVnYW50JTIwZWFycmluZ3MlMjBqZXdlbHJ5fGVufDB8fHx8MTc4ODQzNzg4Nnww&ixlib=rb-4.1.0&q=85",
+   "description": "",
+   "order": 3
+  },
+  {
+   "id": "7a081901-f8e5-49df-b3da-49c6f8ef64c3",
+   "slug": "bracelets",
+   "name": "Bracelets",
+   "starting_price": 60,
+   "image_url": "https://images.unsplash.com/photo-1629118639934-2b241503956c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwzfHxnb2xkJTIwcmluZ3MlMjBoYW5kJTIwamV3ZWxyeXxlbnwwfHx8fDE3ODg0Mzc4OTV8MA&ixlib=rb-4.1.0&q=85",
+   "description": "",
+   "order": 4
+  }
+ ],
+ "products": [
+  {
+   "id": "6d1744c2-eb03-4378-a344-b401cdf05839",
+   "slug": "italian-bracelet-silver",
+   "name": "Italian Bracelet (Silver)",
+   "description": "The classic silver-tone Italian link bracelet — a modern essential that quietly polishes every outfit.",
+   "price": 100.0,
+   "category": "bracelets",
+   "images": [
+    "https://customer-assets-wrfwihn1.emergentagent.net/job_blush-collection-1/artifacts/97ca3e8e34912254_2b50eba1-2f72-46dc-958d-a3ce17716c6a.JPG"
+   ],
+   "stock": 10,
+   "featured": true,
+   "sold_out": false,
+   "created_at": "2026-10-12T15:23:05.750163+00:00",
+   "updated_at": "2026-10-12T15:23:05.750173+00:00"
+  },
+  {
+   "id": "3ff4260e-dec5-4e17-add5-b5111fc993cb",
+   "slug": "cherry-charm-necklace",
+   "name": "Cherry Charm Necklace",
+   "description": "A dainty gold-tone chain finished with a jewelled cherry charm — one tiny ruby, one red crystal. Playful, romantic and endlessly layerable.",
+   "price": 65.0,
+   "category": "necklaces",
+   "images": [
+    "https://customer-assets-wrfwihn1.emergentagent.net/job_blush-collection-1/artifacts/05850988699d2014_3ac337de-9889-4e0f-b541-a9a1f03610a8.JPG"
+   ],
+   "stock": 12,
+   "featured": true,
+   "sold_out": true,
+   "created_at": "2026-10-12T15:23:05.612920+00:00",
+   "updated_at": "2026-10-29T21:11:47.870092+00:00"
+  },
+  {
+   "id": "297ebc24-24d2-47c0-b987-27d116dc8fd2",
+   "slug": "ayatul-kursi-bangle-silver",
+   "name": "Ayatul Kursi Bangle (Silver)",
+   "description": "A sleek silver-tone bangle finely engraved with the Ayatul Kursi — a meaningful piece designed to be worn every day.",
+   "price": 80.0,
+   "category": "bracelets",
+   "images": [
+    "https://customer-assets-wrfwihn1.emergentagent.net/job_blush-collection-1/artifacts/ef61ddad6847e98d_9ac58f6e-4eb6-4a26-b146-06c376c68528.JPG"
+   ],
+   "stock": 10,
+   "featured": true,
+   "sold_out": false,
+   "created_at": "2026-10-12T15:23:05.475568+00:00",
+   "updated_at": "2026-10-12T15:23:05.475575+00:00"
+  },
+  {
+   "id": "bc156a29-f382-4107-85dc-6298149019ef",
+   "slug": "gold-tulip-pendant-necklace",
+   "name": "Gold Tulip Pendant Necklace",
+   "description": "A soft gold-tone tulip pressed into an oval medallion on a fine snake chain. Vintage-feminine with a quiet, hand-made feel.",
+   "price": 65.0,
+   "category": "necklaces",
+   "images": [
+    "https://customer-assets-wrfwihn1.emergentagent.net/job_blush-collection-1/artifacts/d94b9cf3fa8970b4_793a63ee-beb8-492c-a616-6bc1382605db.JPG"
+   ],
+   "stock": 12,
+   "featured": true,
+   "sold_out": false,
+   "created_at": "2026-10-12T15:23:05.296393+00:00",
+   "updated_at": "2026-10-12T15:23:05.296401+00:00"
+  },
+  {
+   "id": "7e6922b1-a4c7-4444-8697-5b0de9dca601",
+   "slug": "ayatul-kursi-bangle-black",
+   "name": "Ayatul Kursi Bangle (Black)",
+   "description": "A sleek black bangle engraved with the Ayatul Kursi in silver detailing — quietly powerful and beautifully modern.",
+   "price": 80.0,
+   "category": "bracelets",
+   "images": [
+    "https://customer-assets-wrfwihn1.emergentagent.net/job_blush-collection-1/artifacts/3d875188ed0ca7fc_8515cc55-0c31-4978-8643-37ec866fe501.JPG"
+   ],
+   "stock": 10,
+   "featured": true,
+   "sold_out": false,
+   "created_at": "2026-10-12T15:18:57.775514+00:00",
+   "updated_at": "2026-10-12T15:18:57.775521+00:00"
+  },
+  {
+   "id": "f885673e-a8d6-4dbe-aa23-e8d431be5a48",
+   "slug": "beaded-gold-chain-necklace",
+   "name": "Beaded Gold Chain Necklace",
+   "description": "A fine gold chain punctuated with tiny beads — the soft everyday necklace she'll never take off.",
+   "price": 65.0,
+   "category": "necklaces",
+   "images": [
+    "https://customer-assets-wrfwihn1.emergentagent.net/job_blush-collection-1/artifacts/b55a729600cd5223_8542bb04-b082-492e-8e59-0836ccf5c23c.JPG"
+   ],
+   "stock": 12,
+   "featured": true,
+   "sold_out": false,
+   "created_at": "2026-10-12T15:18:57.641656+00:00",
+   "updated_at": "2026-10-12T15:18:57.641666+00:00"
+  },
+  {
+   "id": "68012d2c-0dde-47c8-952a-a42486d74757",
+   "slug": "black-gold-clover-bracelet",
+   "name": "Black & Gold Clover Bracelet",
+   "description": "A gold-tone snake chain bracelet set with black and gold clover motifs — stackable, understated and endlessly wearable.",
+   "price": 100.0,
+   "category": "bracelets",
+   "images": [
+    "https://customer-assets-wrfwihn1.emergentagent.net/job_blush-collection-1/artifacts/34ca092b4dcf2d50_acfdda47-5e4c-4f84-bc8f-368c02af28f5.JPG",
+    "https://customer-assets-wrfwihn1.emergentagent.net/job_blush-collection-1/artifacts/d381d4d5638534ce_1d8e2abb-129f-4bc7-a96e-b97361c96d22.JPG"
+   ],
+   "stock": 9,
+   "featured": true,
+   "sold_out": false,
+   "created_at": "2026-10-12T15:18:57.502509+00:00",
+   "updated_at": "2026-10-12T15:23:05.154702+00:00"
+  },
+  {
+   "id": "8a851813-b16f-43e0-8fd7-9bb1cf1c918e",
+   "slug": "ayatul-kursi-bangle-gold",
+   "name": "Ayatul Kursi Bangle (Gold)",
+   "description": "A delicate gold-tone bangle finely engraved with the Ayatul Kursi — a meaningful piece designed to be worn every day.",
+   "price": 80.0,
+   "category": "bracelets",
+   "images": [
+    "https://customer-assets-wrfwihn1.emergentagent.net/job_blush-collection-1/artifacts/a4e12c5b6054e1c1_ce73d3c0-f435-493b-9e34-e501cee3e34a.JPG"
+   ],
+   "stock": 10,
+   "featured": true,
+   "sold_out": false,
+   "created_at": "2026-10-12T15:18:57.332347+00:00",
+   "updated_at": "2026-10-12T15:18:57.332354+00:00"
+  },
+  {
+   "id": "f0141891-23d7-495a-b708-c38c39a8571b",
+   "slug": "cherry-heart-pendant-necklace",
+   "name": "Cherry Heart Pendant Necklace",
+   "description": "A gold cherry pendant set with a tiny red heart stone on a fine rope chain. Playful, feminine and quietly romantic — made for layering or wearing solo.",
+   "price": 65.0,
+   "category": "necklaces",
+   "images": [
+    "https://customer-assets-wrfwihn1.emergentagent.net/job_blush-collection-1/artifacts/5cc086a315e9dd8c_860f0233-67aa-48b7-b64e-8ed7da987cdc.JPG"
+   ],
+   "stock": 12,
+   "featured": true,
+   "sold_out": false,
+   "created_at": "2026-10-12T15:18:57.199772+00:00",
+   "updated_at": "2026-10-12T15:18:57.199782+00:00"
+  }
+ ],
+ "faqs": [
+  {
+   "id": "5f1ff553-8bd0-44f9-85d1-e6efa293e2a0",
+   "order": 0,
+   "question": "Where do you deliver?",
+   "answer": "We currently deliver within Cape Town, South Africa. If you're outside Cape Town, message us on WhatsApp — we may be able to arrange a courier."
+  },
+  {
+   "id": "b183ae3b-a8af-4117-ab3b-77205f69ab79",
+   "order": 1,
+   "question": "How long does delivery take?",
+   "answer": "Cape Town deliveries typically arrive within 2–4 working days after your order is confirmed."
+  },
+  {
+   "id": "0cd4f846-b6d6-48a2-82e9-a036f95a0784",
+   "order": 2,
+   "question": "What payment methods do you accept?",
+   "answer": "We accept EFT, cash on delivery (Cape Town), and WhatsApp-confirmed orders. Card payments are coming soon."
+  },
+  {
+   "id": "37058f99-887f-43fb-a16e-b45af73370a1",
+   "order": 3,
+   "question": "What is the minimum order?",
+   "answer": "Our minimum order is R100."
+  },
+  {
+   "id": "323268c6-be23-455f-ab7d-a80029f8162e",
+   "order": 4,
+   "question": "How do I place an order?",
+   "answer": "Add your pieces to the cart and checkout online, or send us a WhatsApp on 061 404 5481 and we'll help you order in a few messages."
+  },
+  {
+   "id": "81b9f834-9ea9-4db0-a36a-5b77c69f8142",
+   "order": 5,
+   "question": "Can I return or exchange jewellery?",
+   "answer": "For hygiene reasons, earrings cannot be returned. Other pieces can be exchanged within 7 days if unworn and in their original packaging."
+  },
+  {
+   "id": "f88bf11d-7878-48a2-8ab6-46a5f731e819",
+   "order": 6,
+   "question": "How should I care for my jewellery?",
+   "answer": "Keep pieces away from water, perfume and lotion. Store in the pouch provided and wipe gently with a soft cloth after wear."
+  }
+ ],
+ "settings": {
+  "delivery_fee": 50.0,
+  "min_order": 100.0,
+  "whatsapp_number": "27614045481",
+  "instagram_handle": "julesforher_",
+  "tiktok_handle": "julesforher_",
+  "announcement": "Cape Town deliveries available  •  Minimum order R100",
+  "about_headline": "Made For Her, Chosen By Her.",
+  "about_text": "Jules For Her is a Cape Town-based jewellery brand focused on beautiful, affordable pieces that let you express your style every day. From delicate necklaces to statement earrings, every piece is selected to add that little extra sparkle to your look.",
+  "delivery_info": "Free packaging on every order. Cape Town delivery in 2–4 working days.",
+  "returns_info": "Exchanges accepted within 7 days on unworn pieces (excluding earrings, for hygiene).",
+  "care_info": "Keep away from water, perfume and lotion. Store in the pouch provided."
+ }
+}
